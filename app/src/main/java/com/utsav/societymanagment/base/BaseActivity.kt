@@ -12,7 +12,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.lifecycle.ViewModel
 import com.utsav.societymanagment.R
-import com.utsav.societymanagment.Utils.hideKeyboard
+import com.utsav.societymanagment.utils.hideKeyboard
 import javax.inject.Inject
 
 abstract class BaseActivity<T : ViewDataBinding, V : ViewModel> : AppCompatActivity() {

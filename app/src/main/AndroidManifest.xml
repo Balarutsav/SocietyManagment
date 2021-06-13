@@ -17,7 +17,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SocietyManagment">
-        <activity android:name=".Ui.Splash.MainActivity">
+        <activity android:name=".ui.Splash.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

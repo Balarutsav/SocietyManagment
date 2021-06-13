@@ -1,5 +1,5 @@
 
-package com.utsav.societymanagment.Utils
+package com.utsav.societymanagment.utils
 import android.util.Log
 import androidx.databinding.library.BuildConfig
 

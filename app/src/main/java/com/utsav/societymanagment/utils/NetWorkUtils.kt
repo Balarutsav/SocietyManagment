@@ -1,5 +1,5 @@
 
-package com.utsav.societymanagment.Utils
+package com.utsav.societymanagment.utils
 import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities

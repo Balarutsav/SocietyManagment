@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1074665988087",
+    "project_id": "societymanagment-d8f94",
+    "storage_bucket": "societymanagment-d8f94.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1074665988087:android:7aacc581539779420958f2",
+        "android_client_info": {
+          "package_name": "com.utsav.societymanagment"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1074665988087-cipe97d47bskq5tl8ietpq16lvuj0mf3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCNPsdMIqC3BlLK0QVoz-M761lREIXpLA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1074665988087-cipe97d47bskq5tl8ietpq16lvuj0mf3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

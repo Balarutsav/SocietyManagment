@@ -1,4 +1,4 @@
-package com.utsav.societymanagment.Utils
+package com.utsav.societymanagment.utils
 
 import android.annotation.SuppressLint
 import android.app.Activity

@@ -1,4 +1,4 @@
-package com.utsav.societymanagment.Utils
+package com.utsav.societymanagment.utils
 
 object AppConstants {
     const val PASSWORD_LIMIT = 8

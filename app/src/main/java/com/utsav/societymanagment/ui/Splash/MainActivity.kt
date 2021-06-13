@@ -1,4 +1,4 @@
-package com.utsav.societymanagment.Ui.Splash
+package com.utsav.societymanagment.ui.Splash
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
