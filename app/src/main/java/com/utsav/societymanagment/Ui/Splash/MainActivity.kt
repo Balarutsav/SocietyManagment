@@ -1,9 +1,10 @@
-package com.utsav.societymanagment
+package com.utsav.societymanagment.Ui.Splash
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.utsav.societymanagment.R
 
-class MainActivity : AppCompatActivity() {
+class Base : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
