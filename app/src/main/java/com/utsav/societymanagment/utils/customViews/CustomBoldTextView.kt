@@ -1,10 +1,11 @@
-package com.cluttrfly.driver.ui.custom
+package com.utsav.societymanagment.utils.customViews
 
 import android.content.Context
 import android.util.AttributeSet
 import androidx.appcompat.widget.AppCompatTextView
 import androidx.core.content.res.ResourcesCompat
-import com.cluttrfly.driver.R
+
+import com.utsav.societymanagment.R
 
 class CustomBoldTextView : AppCompatTextView {
     constructor(context: Context) : super(context) {

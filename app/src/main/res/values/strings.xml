@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">SocietyManagment</string>
+    <string name="email_address">Email Address</string>
 </resources>

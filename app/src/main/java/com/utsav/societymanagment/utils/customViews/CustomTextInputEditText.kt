@@ -1,4 +1,5 @@
-package com.cluttrfly.driver.ui.custom
+package com.utsav.societymanagment.utils.customViews
+
 
 import android.content.Context
 import android.os.Build
@@ -8,8 +9,9 @@ import android.util.AttributeSet
 import android.view.View
 import android.widget.EditText
 import androidx.core.content.res.ResourcesCompat
-import com.cluttrfly.driver.R
+
 import com.google.android.material.textfield.TextInputEditText
+import com.utsav.societymanagment.R
 
 class CustomTextInputEditText : TextInputEditText {
     constructor(context: Context) : super(context) {

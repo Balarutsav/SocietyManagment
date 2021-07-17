@@ -1,10 +1,12 @@
-package com.cluttrfly.driver.ui.custom
+package com.utsav.societymanagment.utils.customViews
+
 
 import android.content.Context
 import android.util.AttributeSet
 import androidx.appcompat.widget.AppCompatTextView
 import androidx.core.content.res.ResourcesCompat
-import com.cluttrfly.driver.R
+import com.utsav.societymanagment.R
+
 
 class CustomTextView : AppCompatTextView {
     constructor(context: Context) : super(context) {
@@ -26,5 +28,6 @@ class CustomTextView : AppCompatTextView {
     private fun setFontTypeFace(context: Context) {
         val face = ResourcesCompat.getFont(context, R.font.montserrat_regular)
         this.typeface = face
+
     }
 }

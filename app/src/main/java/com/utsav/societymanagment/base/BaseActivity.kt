@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.lifecycle.ViewModel
+import com.google.gson.Gson
 import com.utsav.societymanagment.R
 import com.utsav.societymanagment.utils.hideKeyboard
 import javax.inject.Inject
@@ -19,6 +20,7 @@ abstract class BaseActivity<T : ViewDataBinding, V : ViewModel> : AppCompatActiv
 
     @Inject
     lateinit var mViewModel: V
+
     lateinit var binding: T
 
     abstract fun getBindingVariable(): Int

@@ -1,2 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <dimen name="sp25">25sp</dimen>
+    <dimen name="dp20">20dp</dimen>
+    <dimen name="dp50">50dp</dimen>
+
+
+    <dimen name="all_margin">25dp</dimen>
+
+    <dimen name="_12sp">12sp</dimen>
+    <dimen name="_14sp">14sp</dimen>
+    <dimen name="_15sp">15sp</dimen>
+    <dimen name="_16sp">16sp</dimen>
+    <dimen name="_18sp">18sp</dimen>
+    <dimen name="_20sp">20sp</dimen>
+
+    <!--    Button-->
+    <dimen name="button_radius">10dp</dimen>
+    <dimen name="button_margin">10dp</dimen>
+    <dimen name="button_padding">10dp</dimen>
+    <dimen name="button_text_size">16sp</dimen>
+
+    <!--    Edit text-->
+    <dimen name="edit_text_padding">20dp</dimen>
+    <dimen name="edit_text_size">12sp</dimen>
+
+
+    <dimen name="margin_5">5dp</dimen>
+    <dimen name="margin_10">10dp</dimen>
+    <dimen name="padding_5">5dp</dimen>
+    <dimen name="padding_8">8dp</dimen>
+    <dimen name="padding_10">10dp</dimen>
+    <dimen name="padding_15">15dp</dimen>
+    <dimen name="padding_20">20dp</dimen>
+    <dimen name="padding_30">32dp</dimen>
+
+    <dimen name="title_text_size">18sp</dimen>
+
+    <!--    Title bar-->
+    <dimen name="back_arrow_size">40dp</dimen>
+    <dimen name="titleBar_text_size">18sp</dimen>
+    <dimen name="titleBar_bg_radius">15dp</dimen>
+    <!--
+    Because the window insets on round devices are larger than 15dp, this padding only applies
+    to square screens.
+    -->
+    <dimen name="box_inset_layout_padding">0dp</dimen>
+
+    <!--
+    This padding applies to both square and round screens. The total padding between the buttons
+    and the window insets is box_inset_layout_padding (above variable) on square screens and
+    inner_frame_layout_padding (below variable) on round screens.
+    -->
+    <dimen name="inner_frame_layout_padding">5dp</dimen>
+    <dimen name="radius_8">8dp</dimen>
+    <dimen name="_13sp">13sp</dimen>
+    <dimen name="margin_20">20dp</dimen>
+    <dimen name="margin_8">8dp</dimen>
+    <dimen name="margin_30">30dp</dimen>
+    <dimen name="font_12">12sp</dimen>
+    <dimen name="font_17">17sp</dimen>
+    <dimen name="margin_40">40dp</dimen>
+    <dimen name="margin_100">100dp</dimen>
+    <dimen name="margin_80">80dp</dimen>
+    <dimen name="margin_25">25dp</dimen>
+    <dimen name="margin_50">50dp</dimen>
+    <dimen name="font_18">18sp</dimen>
+    <dimen name="radius_10">10dp</dimen>
+    <dimen name="radius_5">5dp</dimen>
+    <dimen name="font_31">31sp</dimen>
+</resources>

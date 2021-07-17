@@ -14,7 +14,6 @@ abstract class BaseFragment<T : ViewDataBinding, V : ViewModel> : Fragment() {
     @Inject
     lateinit var mViewModel: V
     lateinit var binding: T
-
     abstract fun getBindingVariable(): Int
     abstract fun getLayoutId(): Int
 
