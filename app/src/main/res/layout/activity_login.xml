@@ -1,163 +1,180 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
+
         <variable
             name="viewModel"
             type="com.utsav.societymanagment.ui.login.LoginViewModel" />
     </data>
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:background="@color/white"
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:padding="@dimen/padding_20"
         android:layout_height="match_parent"
-        >
-        <androidx.appcompat.widget.AppCompatImageView
-            android:layout_width="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            android:src="@drawable/ic_app_logo"
-            android:id="@+id/ivLogo"
-            app:layout_constraintVertical_bias="0.2"
-            android:layout_marginTop="50dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_height="wrap_content"/>
-        <com.utsav.societymanagment.utils.customViews.CustomTextView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            app:layout_constraintTop_toBottomOf="@id/ivLogo"
-            android:text="Welcome Back!"
-            android:layout_marginTop="@dimen/dp50"
-            android:id="@+id/tvWelcomeBack"
-            android:textSize="@dimen/sp25"
-            android:textColor="@color/black"
-            android:layout_height="wrap_content"/>
-        <com.utsav.societymanagment.utils.customViews.CustomBoldTextView
-            android:layout_width="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/tvWelcomeBack"
-            android:text="SignIn"
-            android:id="@+id/tvSignin"
-            android:textSize="@dimen/sp25"
-            android:layout_marginTop="5dp"
-            android:textColor="@color/black"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_height="wrap_content"/>
-        <com.utsav.societymanagment.utils.customViews.CustomTextInputLayout
-            android:layout_width="match_parent"
-            app:layout_constraintTop_toBottomOf="@id/tvSignin"
-            android:layout_marginTop="@dimen/margin_25"
-            android:id="@+id/tilEmail"
-            android:layout_height="wrap_content"
-            android:hint="@string/email_address">
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:padding="@dimen/padding_20">
 
-            <com.utsav.societymanagment.utils.customViews.CustomTextInputEditText
-                style="@style/editTextStyle"
-                android:imeOptions="actionNext"
-                android:id="@+id/edtEmail"
-                android:inputType="textEmailAddress"
-                android:text="@={viewModel.emailAddress}" />
-        </com.utsav.societymanagment.utils.customViews.CustomTextInputLayout>
-        <com.utsav.societymanagment.utils.customViews.CustomTextInputLayout
-            android:layout_width="match_parent"
-            app:layout_constraintTop_toBottomOf="@id/tilEmail"
-            android:layout_marginTop="@dimen/margin_25"
-            android:id="@+id/tilPassword"
-            android:layout_height="wrap_content"
-            android:hint="@string/password">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:src="@drawable/ic_app_logo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.2" />
 
-            <com.utsav.societymanagment.utils.customViews.CustomTextInputEditText
-                style="@style/editTextStyle"
-                android:imeOptions="actionDone"
-                android:id="@+id/edtPassword"
-                android:inputType="textPassword"
-                android:text="@={viewModel.password}" />
-        </com.utsav.societymanagment.utils.customViews.CustomTextInputLayout>
-        <com.utsav.societymanagment.utils.customViews.CustomMediumTextView
-            android:layout_width="wrap_content"
-            android:textColor="@color/black"
-            android:text="@string/forgot_password"
-            android:id="@+id/tvForgotPwd"
-            app:layout_constraintTop_toBottomOf="@id/tilPassword"
-            android:layout_marginTop="@dimen/padding_15"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_height="wrap_content"/>
+            <com.utsav.societymanagment.utils.customViews.CustomTextView
+                android:id="@+id/tvWelcomeBack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp50"
+                android:text="Welcome Back!"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp25"
+                app:layout_constraintTop_toBottomOf="@id/ivLogo" />
 
-        <Button
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="@dimen/margin_25"
-            style="@style/buttonStyle"
-            android:id="@+id/btnSignin"
-            app:layout_constraintTop_toBottomOf="@id/tvForgotPwd"
-            android:onClick="@{()->viewModel.signIn()}"
-            android:text="@string/sign_in" />
+            <com.utsav.societymanagment.utils.customViews.CustomBoldTextView
+                android:id="@+id/tvSignin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="SignIn"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp25"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvWelcomeBack" />
 
-        <androidx.appcompat.widget.AppCompatImageView
-            android:layout_width="@dimen/dp50"
-            android:src="@drawable/fb_icon"
-            app:layout_constraintTop_toBottomOf="@id/btnSignin"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.4"
-            android:layout_marginTop="@dimen/margin_20"
-            android:id="@+id/ivFb"
-            android:foreground="?selectableItemBackgroundBorderless"
-            android:onClick="@{()->viewModel.fbSignIn()}"
-            android:layout_height="@dimen/dp50"/>
+            <com.utsav.societymanagment.utils.customViews.CustomTextInputLayout
+                android:id="@+id/tilEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_25"
+                android:hint="@string/email_address"
+                app:layout_constraintTop_toBottomOf="@id/tvSignin">
 
-        <androidx.appcompat.widget.AppCompatImageView
-            android:layout_width="@dimen/dp50"
-            android:src="@drawable/google_icon"
-            android:foreground="?selectableItemBackgroundBorderless"
-            android:onClick="@{()->viewModel.googleSignIn()}"
-            android:id="@+id/ivGoogle"
-            app:layout_constraintTop_toTopOf="@id/ivFb"
-            app:layout_constraintBottom_toBottomOf="@id/ivFb"
-            android:layout_marginStart="@dimen/margin_20"
-            app:layout_constraintStart_toEndOf="@id/ivFb"
-            android:layout_height="@dimen/dp50"/>
+                <com.utsav.societymanagment.utils.customViews.CustomTextInputEditText
+                    android:id="@+id/edtEmail"
+                    style="@style/editTextStyle"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:text="@={viewModel.emailAddress}" />
+            </com.utsav.societymanagment.utils.customViews.CustomTextInputLayout>
 
-        <androidx.constraintlayout.widget.Group
-            android:layout_width="wrap_content"
-            app:constraint_referenced_ids="ivFb,ivGoogle"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/btnSignin"
-            android:layout_height="wrap_content"/>
-        <com.utsav.societymanagment.utils.customViews.CustomBoldTextView
-            android:layout_width="wrap_content"
-            android:text="@string/or"
-            app:layout_constraintTop_toBottomOf="@id/ivFb"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="@dimen/margin_30"
-            android:textColor="@color/black"
-            android:textSize="@dimen/_20sp"
-            android:textAllCaps="true"
-            android:id="@+id/tvOr"
-            android:layout_height="wrap_content"/>
-        <com.utsav.societymanagment.utils.customViews.CustomMediumTextView
-            android:layout_width="wrap_content"
-            android:text="@string/don_t_have_an_account"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintVertical_bias="1"
-            android:textColor="@color/black"
-            android:textSize="@dimen/_15sp"
-            app:layout_constraintStart_toStartOf="parent"
-            android:onClick="@{()->viewModel.signUp()}"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:id="@+id/tvDontHaveAccount" android:layout_height="wrap_content"/>
+            <com.utsav.societymanagment.utils.customViews.CustomTextInputLayout
+                android:id="@+id/tilPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_25"
+                android:hint="@string/password"
+                app:layout_constraintTop_toBottomOf="@id/tilEmail">
 
-        <com.utsav.societymanagment.utils.customViews.CustomBoldTextView
-            android:layout_width="wrap_content"
-            android:textSize="@dimen/_15sp"
-            android:textColor="@color/colorPrimary"
-            android:text="@string/sign_up"
-            android:onClick="@{()->viewModel.signUp()}"
+                <com.utsav.societymanagment.utils.customViews.CustomTextInputEditText
+                    android:id="@+id/edtPassword"
+                    style="@style/editTextStyle"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:text="@={viewModel.password}" />
+            </com.utsav.societymanagment.utils.customViews.CustomTextInputLayout>
 
-            app:layout_constraintStart_toEndOf="@id/tvDontHaveAccount"
-            android:layout_marginStart="10dp"
-            app:layout_constraintTop_toTopOf="@id/tvDontHaveAccount"
-            app:layout_constraintBottom_toBottomOf="@id/tvDontHaveAccount"
-            android:layout_height="wrap_content"/>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <com.utsav.societymanagment.utils.customViews.CustomMediumTextView
+                android:id="@+id/tvForgotPwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_15"
+                android:text="@string/forgot_password"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tilPassword" />
+
+            <Button
+                android:id="@+id/btnSignin"
+                style="@style/buttonStyle"
+                android:layout_marginTop="@dimen/margin_25"
+                android:onClick="@{()->viewModel.signIn()}"
+                android:text="@string/sign_in"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvForgotPwd" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivFb"
+                android:layout_width="@dimen/dp50"
+                android:layout_height="@dimen/dp50"
+                android:layout_marginTop="@dimen/margin_20"
+                android:foreground="?selectableItemBackgroundBorderless"
+                android:onClick="@{()->viewModel.fbSignIn()}"
+                android:src="@drawable/fb_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnSignin" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivGoogle"
+                android:layout_width="@dimen/dp50"
+                android:layout_height="@dimen/dp50"
+                android:layout_marginStart="@dimen/margin_20"
+                android:foreground="?selectableItemBackgroundBorderless"
+                android:onClick="@{()->viewModel.googleSignIn()}"
+                android:src="@drawable/google_icon"
+                app:layout_constraintBottom_toBottomOf="@id/ivFb"
+                app:layout_constraintStart_toEndOf="@id/ivFb"
+                app:layout_constraintTop_toTopOf="@id/ivFb" />
+
+            <androidx.constraintlayout.widget.Group
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="ivFb,ivGoogle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnSignin" />
+
+            <com.utsav.societymanagment.utils.customViews.CustomBoldTextView
+                android:id="@+id/tvOr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_30"
+                android:text="@string/or"
+                android:textAllCaps="true"
+                app:layout_constraintVertical_bias="0.5"
+                app:layout_constraintBottom_toTopOf="@id/tvDontHaveAccount"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivFb" />
+
+            <com.utsav.societymanagment.utils.customViews.CustomMediumTextView
+                android:id="@+id/tvDontHaveAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{()->viewModel.signUp()}"
+                android:text="@string/don_t_have_an_account"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.4"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <com.utsav.societymanagment.utils.customViews.CustomBoldTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:onClick="@{()->viewModel.signUp()}"
+                android:text="@string/sign_up"
+
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_15sp"
+                app:layout_constraintBottom_toBottomOf="@id/tvDontHaveAccount"
+                app:layout_constraintStart_toEndOf="@id/tvDontHaveAccount"
+                app:layout_constraintTop_toTopOf="@id/tvDontHaveAccount" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 </layout>

@@ -1,5 +1,6 @@
 package com.utsav.societymanagment.utils
 
+import android.app.Activity
 import android.content.Context
 
 /**
@@ -16,9 +17,9 @@ enum class ValidationStatus {
     Success
 }
 object Validation{
-    fun showMessageDialog(context:Context,validationStatus: ValidationStatus){
+    fun showMessageDialog(activity:Activity,validationStatus: ValidationStatus){
         val message=getMessage(validationStatus)
-        context.showToast(message)
+        activity.showSingleButtonMsg(message,false)
         AppLog.e("Validation message",message)
     }
 

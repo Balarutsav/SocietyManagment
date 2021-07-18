@@ -16,6 +16,11 @@ class LoginActivity : BaseActivity<ActivityLoginBinding, LoginViewModel>(), Logi
         return BR.viewModel
     }
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        mViewModel.setNavigator(this)
+    }
+
     override fun getLayoutId(): Int {
         return R.layout.activity_login
     }

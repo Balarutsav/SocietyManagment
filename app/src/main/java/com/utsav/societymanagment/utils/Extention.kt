@@ -24,8 +24,13 @@ fun Context.hideKeyboard() {
     }
     imm.hideSoftInputFromWindow(view.windowToken, 0)
 }
-fun Context.showToast(message:String){
- Toast.makeText(this,message,Toast.LENGTH_LONG).show()
+
+fun Context.showToast(message: String) {
+    Toast.makeText(this, message, Toast.LENGTH_LONG).show()
+}
+
+fun Activity.showSingleButtonMsg(message: String, activityFinish: Boolean) {
+    Dialog.displayDialogSingleButton(this, message, activityFinish)
 }
 
 @SuppressLint("HardwareIds")
