@@ -1,18 +1,16 @@
-package com.utsav.societymanagment.ui.Login
+package com.utsav.societymanagment.ui.login
 
 import android.os.Bundle
+import androidx.lifecycle.Observer
 import com.utsav.societymanagment.BR
 import com.utsav.societymanagment.R
 import com.utsav.societymanagment.base.BaseActivity
 import com.utsav.societymanagment.databinding.ActivityLoginBinding
-import com.utsav.societymanagment.databinding.ActivitySplashBinding
+import com.utsav.societymanagment.utils.Validation
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class LoginActivity : BaseActivity<ActivityLoginBinding,LoginViewModel >(), LoginNavigator {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
+class LoginActivity : BaseActivity<ActivityLoginBinding, LoginViewModel>(), LoginNavigator {
 
     override fun getBindingVariable(): Int {
         return BR.viewModel
@@ -28,5 +26,11 @@ class LoginActivity : BaseActivity<ActivityLoginBinding,LoginViewModel >(), Logi
 
     override fun moveToHome() {
 
+    }
+
+    override fun setObserver() {
+        mViewModel.getValidationStatus().observe(this, Observer {
+            Validation.showMessageDialog(activity, it)
+        })
     }
 }

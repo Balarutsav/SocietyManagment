@@ -1,4 +1,4 @@
-package com.utsav.societymanagment.ui.Login
+package com.utsav.societymanagment.ui.login
 
 interface LoginNavigator {
     fun moveToLogin()

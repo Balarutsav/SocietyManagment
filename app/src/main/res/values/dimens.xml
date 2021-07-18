@@ -15,7 +15,7 @@
     <dimen name="_20sp">20sp</dimen>
 
     <!--    Button-->
-    <dimen name="button_radius">10dp</dimen>
+    <dimen name="button_radius">30dp</dimen>
     <dimen name="button_margin">10dp</dimen>
     <dimen name="button_padding">10dp</dimen>
     <dimen name="button_text_size">16sp</dimen>
@@ -68,4 +68,5 @@
     <dimen name="radius_10">10dp</dimen>
     <dimen name="radius_5">5dp</dimen>
     <dimen name="font_31">31sp</dimen>
+    <dimen name="dp25">25dp</dimen>
 </resources>

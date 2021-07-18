@@ -10,6 +10,7 @@ import android.provider.Settings
 import android.util.Patterns
 import android.view.View
 import android.view.inputmethod.InputMethodManager
+import android.widget.Toast
 
 
 fun Context.hideKeyboard() {
@@ -22,6 +23,9 @@ fun Context.hideKeyboard() {
         view = View(this)
     }
     imm.hideSoftInputFromWindow(view.windowToken, 0)
+}
+fun Context.showToast(message:String){
+ Toast.makeText(this,message,Toast.LENGTH_LONG).show()
 }
 
 @SuppressLint("HardwareIds")

@@ -1,6 +1,7 @@
 
 package com.utsav.societymanagment.base
 
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
@@ -22,9 +23,10 @@ abstract class BaseActivity<T : ViewDataBinding, V : ViewModel> : AppCompatActiv
     lateinit var mViewModel: V
 
     lateinit var binding: T
-
+    lateinit var activity:Activity
     abstract fun getBindingVariable(): Int
     abstract fun getLayoutId(): Int
+    abstract fun setObserver()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,9 +34,16 @@ abstract class BaseActivity<T : ViewDataBinding, V : ViewModel> : AppCompatActiv
     }
 
     private fun performDataBinding() {
+        activity=this
         binding = DataBindingUtil.setContentView(this, getLayoutId())
         binding.setVariable(getBindingVariable(), mViewModel)
         binding.executePendingBindings()
+        setObserver()
+        setValidationObserver();
+    }
+
+    private fun setValidationObserver() {
+
     }
 
     fun startActivityWithFinish(target: Class<*>, bundle: Bundle?) {
