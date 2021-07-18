@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SocietyManagment</string>
+    <string name="app_name">Fusion Society</string>
     <string name="email_address">Email Address</string>
     <string name="sign_in">Sign in</string>
     <string name="password">Password</string>
@@ -7,4 +7,9 @@
     <string name="or">or</string>
     <string name="don_t_have_an_account">Don\'t have an account?</string>
     <string name="sign_up">SIGN Up</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="by_clicking_singup_you_aggree_our_terms_and_conditions_as_well_as_our_privacy_policy">By clicking singup you aggree our terms and conditions as well as our privacy policy</string>
+    <string name="login">Login</string>
 </resources>

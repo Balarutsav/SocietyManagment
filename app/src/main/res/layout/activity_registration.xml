@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.utsav.societymanagment.ui.registration.RegistrationViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/padding_20"
+        tools:context=".ui.registration.RegistrationActivity">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{()->viewModel.signIn()}"
+            android:src="@drawable/ic_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.utsav.societymanagment.utils.customViews.CustomBoldTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{()->viewModel.signIn()}"
+            android:text="@string/login"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.utsav.societymanagment.utils.customViews.CustomBoldTextView
+            android:id="@+id/tvSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_20"
+            android:text="@string/sign_up"
+            android:textColor="@color/text_color_blue"
+            android:textSize="@dimen/sp30"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivBack" />
+
+        <LinearLayout
+            android:id="@+id/llFirstAndLastName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_20"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/tvSignUp">
+
+            <com.utsav.societymanagment.utils.customViews.CustomTextInputLayout
+                android:id="@+id/tilFirstName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/first_name">
+
+                <com.utsav.societymanagment.utils.customViews.CustomTextInputEditText
+                    android:id="@+id/edtFirstName"
+                    style="@style/editTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:text="@={viewModel.firstName}" />
+            </com.utsav.societymanagment.utils.customViews.CustomTextInputLayout>
+
+            <View
+                android:layout_width="@dimen/dp25"
+                android:layout_height="@dimen/dp25" />
+
+            <com.utsav.societymanagment.utils.customViews.CustomTextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/last_name">
+
+                <com.utsav.societymanagment.utils.customViews.CustomTextInputEditText
+                    style="@style/editTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:text="@={viewModel.lastName}" />
+            </com.utsav.societymanagment.utils.customViews.CustomTextInputLayout>
+        </LinearLayout>
+
+        <com.utsav.societymanagment.utils.customViews.CustomTextInputLayout
+            android:id="@+id/tilEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_20"
+            android:hint="@string/email_address"
+            app:layout_constraintTop_toBottomOf="@id/llFirstAndLastName">
+
+            <com.utsav.societymanagment.utils.customViews.CustomTextInputEditText
+                android:id="@+id/edtEmail"
+                style="@style/editTextStyle"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:text="@={viewModel.emailAddress}" />
+        </com.utsav.societymanagment.utils.customViews.CustomTextInputLayout>
+
+        <com.utsav.societymanagment.utils.customViews.CustomTextInputLayout
+            android:id="@+id/tilPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_25"
+            android:hint="Phone Number"
+            app:layout_constraintTop_toBottomOf="@id/tilEmail">
+
+            <com.utsav.societymanagment.utils.customViews.CustomTextInputEditText
+                android:id="@+id/edtPhoneNumber"
+                style="@style/editTextStyle"
+                android:imeOptions="actionNext"
+                android:inputType="phone"
+                android:text="@={viewModel.phoneNumber}" />
+        </com.utsav.societymanagment.utils.customViews.CustomTextInputLayout>
+
+        <com.utsav.societymanagment.utils.customViews.CustomTextInputLayout
+            android:id="@+id/tilPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_25"
+            android:hint="@string/password"
+            app:layout_constraintTop_toBottomOf="@id/tilPhoneNumber">
+
+            <com.utsav.societymanagment.utils.customViews.CustomTextInputEditText
+                android:id="@+id/edtPassword"
+                style="@style/editTextStyle"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:text="@={viewModel.password}" />
+        </com.utsav.societymanagment.utils.customViews.CustomTextInputLayout>
+
+        <com.utsav.societymanagment.utils.customViews.CustomTextInputLayout
+            android:id="@+id/tilConfirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_25"
+            android:hint="@string/confirm_password"
+            app:layout_constraintTop_toBottomOf="@id/tilPassword">
+
+            <com.utsav.societymanagment.utils.customViews.CustomTextInputEditText
+                android:id="@+id/edtConfirmPassword"
+                style="@style/editTextStyle"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:text="@={viewModel.confirmPassword}" />
+        </com.utsav.societymanagment.utils.customViews.CustomTextInputLayout>
+
+        <com.utsav.societymanagment.utils.customViews.CustomTextView
+            android:id="@+id/tvTermsAndCondition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/padding_20"
+            android:text="@string/by_clicking_singup_you_aggree_our_terms_and_conditions_as_well_as_our_privacy_policy"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tilConfirmPassword" />
+
+        <Button
+            android:id="@+id/btnSignUp"
+            style="@style/buttonStyle"
+            android:layout_marginTop="@dimen/margin_25"
+            android:onClick="@{()->viewModel.signUp()}"
+            android:text="@string/sign_up"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTermsAndCondition"
+            app:layout_constraintVertical_bias="1" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

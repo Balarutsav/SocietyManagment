@@ -55,7 +55,7 @@ abstract class BaseActivity<T : ViewDataBinding, V : ViewModel> : AppCompatActiv
         finish()
     }
 
-    fun startActivityWithOutFinish(target: Class<*>, bundle: Bundle?) {
+    fun startActivityWithOutFinish(target: Class<*>, bundle: Bundle?=null) {
         //Call new activity with finish current activity
         val intent = Intent(this, target)
         bundle?.let { intent.putExtras(it) }

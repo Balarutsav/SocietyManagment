@@ -69,4 +69,5 @@
     <dimen name="radius_5">5dp</dimen>
     <dimen name="font_31">31sp</dimen>
     <dimen name="dp25">25dp</dimen>
+    <dimen name="sp30">30sp</dimen>
 </resources>

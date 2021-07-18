@@ -54,7 +54,7 @@ class LoginViewModel @Inject constructor() : BaseViewModel<LoginNavigator>() {
     }
 
     fun signUp() {
-
+getNavigator()?.moveToSignup();
     }
 
 }

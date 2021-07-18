@@ -6,6 +6,7 @@ import com.utsav.societymanagment.BR
 import com.utsav.societymanagment.R
 import com.utsav.societymanagment.base.BaseActivity
 import com.utsav.societymanagment.databinding.ActivityLoginBinding
+import com.utsav.societymanagment.ui.registration.RegistrationActivity
 import com.utsav.societymanagment.utils.Validation
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -25,17 +26,19 @@ class LoginActivity : BaseActivity<ActivityLoginBinding, LoginViewModel>(), Logi
         return R.layout.activity_login
     }
 
-    override fun moveToLogin() {
 
-    }
-
-    override fun moveToHome() {
-
-    }
 
     override fun setObserver() {
         mViewModel.getValidationStatus().observe(this, Observer {
             Validation.showMessageDialog(activity, it)
         })
+    }
+
+    override fun moveToSignup() {
+        startActivityWithOutFinish(RegistrationActivity::class.java)
+    }
+
+    override fun moveToForgotPassword() {
+
     }
 }
